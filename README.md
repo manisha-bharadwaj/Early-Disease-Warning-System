@@ -1,73 +1,199 @@
-# Welcome to your Lovable project
+# 🧬 Disease Spread Early Warning System
 
-## Project info
+A futuristic, real-time public health surveillance dashboard designed to detect disease outbreaks early, visualize regional risk, and support healthcare decision-making.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This platform works like **“Google Maps for Disease Spread”** — combining symptom intelligence, analytics, hospital capacity monitoring, and geo-risk visualization into one unified command center.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Features
 
-**Use Lovable**
+### 🧾 Anonymous Symptom Intelligence Survey
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+* Multi-select symptom reporting
+* Severity tracking
+* Exposure & travel history
+* Vaccination status
+* Age group analytics
+* Scrollable cyber-medical UI form
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+### 📊 Live Health Analytics Dashboard
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+* Daily case trend visualization
+* Symptom distribution analysis
+* Infection growth monitoring
+* Risk zone ranking panels
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Built using interactive chart libraries for real-time insights.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 🏥 Hospital Capacity Monitor
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Displays nearby hospital readiness including:
 
-# Step 3: Install the necessary dependencies.
-npm i
+* Total beds available
+* ICU capacity
+* Oxygen beds
+* Ventilator count
+* Current patient load
+* Availability status indicators
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Helps authorities plan emergency response.
+
+---
+
+### 🗺️ Disease Risk Map
+
+* India-centered surveillance map
+
+* Polygon outbreak zones
+
+* Risk color coding:
+
+  🔴 Severe
+  🟠 Moderate
+  🟢 Low
+
+* Popup case data per region
+
+---
+
+### 🚨 Auto Location Health Alerts
+
+* Detects user GPS location on site load
+* Triggers outbreak risk alerts
+* Displays detected location on dashboard
+* Simulates real surveillance early-warning systems
+
+---
+
+## 🧠 System Workflow
+
+User submits symptom data
+→ Data analyzed regionally
+→ Risk score generated
+→ Dashboard analytics update
+→ Map polygons visualize outbreaks
+→ Alerts triggered for affected users
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+
+* React.js (JavaScript / Vite)
+* Tailwind CSS / Custom CSS
+* ShadCN UI / Glassmorphism styling
+
+**Visualization**
+
+* Recharts / Chart.js
+
+**Maps**
+
+* Leaflet.js
+* React-Leaflet
+* OpenStreetMap
+
+**UI Enhancements**
+
+* Lucide React Icons
+* Framer Motion animations
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── components/
+ │    ├── Header
+ │    ├── SymptomSurvey
+ │    ├── LiveAnalytics
+ │    ├── HospitalCapacity
+ │    ├── GovernmentNotices
+ │    └── LocationAlert
+ │
+ ├── pages/
+ │    ├── Index (Dashboard)
+ │    └── MapView
+ │
+ ├── App.tsx
+ └── main.tsx
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/disease-spread-early-warning-system.git
+cd disease-spread-early-warning-system
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+http://localhost:5173
+```
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🌍 Impact & Use Cases
 
-## What technologies are used for this project?
+* Early outbreak detection
+* Hospital load forecasting
+* Public safety alerts
+* Government surveillance dashboards
+* Pandemic preparedness systems
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🔮 Future Enhancements
 
-## How can I deploy this project?
+* Real backend outbreak analytics engine
+* Heatmap visualization layer
+* District boundary GeoJSON mapping
+* SMS / Email / Push alerts
+* Hospital recommendation engine
+* AI outbreak prediction models
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 🏆 Project Highlights
 
-Yes, you can!
+✔ Socially impactful
+✔ Startup-ready concept
+✔ Hackathon-grade innovation
+✔ Full-stack extensible architecture
+✔ Real-time geo-health intelligence UI
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📜 License
+
+This project is for educational, research, and hackathon demonstration purposes.
+
+---
+
+## 👩‍💻 Author
+
+Developed as part of an advanced public health technology initiative to improve early disease detection and response systems.

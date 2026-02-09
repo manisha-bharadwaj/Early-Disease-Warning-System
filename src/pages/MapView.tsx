@@ -1,60 +1,116 @@
 import { MapContainer, TileLayer, Polygon, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 export default function MapView() {
 
-  // 🔴 Severe outbreak zone — Chennai
-  const severeZone = [
-    [13.0827, 80.2707],
-    [13.10, 80.30],
-    [12.95, 80.25]
+  /* 🔴 Chennai Severe */
+  const chennaiSevere = [
+    [13.25, 80.10],
+    [13.30, 80.35],
+    [13.10, 80.45],
+    [12.95, 80.35],
+    [12.90, 80.15],
+    [13.05, 80.05],
   ];
 
-  // 🟠 Moderate zone — Delhi
-  const moderateZone = [
-    [28.6139, 77.2090],
-    [28.70, 77.15],
-    [28.55, 77.05]
+  /* 🟠 Chennai Moderate */
+  const chennaiModerate = [
+    [13.40, 80.00],
+    [13.45, 80.50],
+    [13.10, 80.65],
+    [12.75, 80.45],
+    [12.70, 80.00],
+    [13.00, 79.85],
   ];
 
-  // 🟢 Low risk — Mumbai
-  const lowZone = [
-    [19.0760, 72.8777],
-    [19.15, 72.95],
-    [18.95, 72.80]
+  /* 🟠 Delhi */
+  const delhiModerate = [
+    [28.80, 77.05],
+    [28.90, 77.35],
+    [28.60, 77.50],
+    [28.40, 77.30],
+    [28.45, 77.00],
+  ];
+
+  /* 🟢 Mumbai */
+  const mumbaiLow = [
+    [19.30, 72.70],
+    [19.40, 73.05],
+    [19.05, 73.20],
+    [18.85, 72.95],
+    [18.95, 72.65],
   ];
 
   return (
-    <div style={{ height: "100vh", width: "100%" }}>
+    <div className="w-full h-screen">
+
       <MapContainer
-        center={[22.9734, 78.6569]} // India center
+        center={[20.5937, 78.9629]}   // India center (safer zoom)
         zoom={5}
-        style={{ height: "100%", width: "100%" }}
+        className="w-full h-full"
       >
 
-        {/* Map Tiles */}
-        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        {/* Base Map */}
+        <TileLayer
+          attribution="&copy; OpenStreetMap contributors"
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
 
-        {/* 🔴 Severe Polygon */}
-        <Polygon positions={severeZone} pathOptions={{ color: "red" }}>
+        {/* 🔴 Chennai Severe */}
+        <Polygon
+          positions={chennaiSevere as any}
+          pathOptions={{
+            color: "red",
+            fillColor: "red",
+            fillOpacity: 0.55,
+          }}
+        >
           <Popup>
-            Chennai — HIGH RISK 🔴 <br />
-            182 active cases
+            <b>Chennai — Severe Risk 🔴</b><br/>
+            2,184 Active Cases
           </Popup>
         </Polygon>
 
-        {/* 🟠 Moderate Polygon */}
-        <Polygon positions={moderateZone} pathOptions={{ color: "orange" }}>
+        {/* 🟠 Chennai Moderate */}
+        <Polygon
+          positions={chennaiModerate as any}
+          pathOptions={{
+            color: "orange",
+            fillColor: "orange",
+            fillOpacity: 0.35,
+          }}
+        >
           <Popup>
-            Delhi — MODERATE RISK 🟠 <br />
-            96 active cases
+            <b>Chennai Peripheral 🟠</b><br/>
+            Moderate Risk Zone
           </Popup>
         </Polygon>
 
-        {/* 🟢 Low Polygon */}
-        <Polygon positions={lowZone} pathOptions={{ color: "green" }}>
+        {/* 🟠 Delhi */}
+        <Polygon
+          positions={delhiModerate as any}
+          pathOptions={{
+            color: "orange",
+            fillColor: "orange",
+            fillOpacity: 0.4,
+          }}
+        >
           <Popup>
-            Mumbai — LOW RISK 🟢 <br />
-            32 active cases
+            Delhi — Moderate Risk 🟠
+          </Popup>
+        </Polygon>
+
+        {/* 🟢 Mumbai */}
+        <Polygon
+          positions={mumbaiLow as any}
+          pathOptions={{
+            color: "green",
+            fillColor: "green",
+            fillOpacity: 0.35,
+          }}
+        >
+          <Popup>
+            Mumbai — Low Risk 🟢
           </Popup>
         </Polygon>
 
